@@ -37,6 +37,11 @@ class Ropa(Producto):
         )
 
 
+class Chaqueta(Ropa):
+    def __init__(self, nombre, precio, cantidad, talla):
+        super().__init__(nombre, precio, cantidad, talla)
+
+
 class Camisa(Ropa):
     def __init__(self, nombre, precio, cantidad, talla):
         super().__init__(nombre, precio, cantidad, talla)
@@ -72,7 +77,7 @@ class Zapatos(Producto):
         )
 
     def mostrar_info(self):
-        # Método sobrescrito (Polimorfismo)
+        # Método Polimorfismo
         print(
             f"Nombre: {self._nombre}, Precio: ${self._precio}, Stock: {self._cantidad}, Talla de Calzado: {self._talla_calzado}"
         )
@@ -119,6 +124,7 @@ def main():
     # Crear instancias de Camisa y Pantalón
     camisa = Camisa("Camisa de Hombre", 25.00, 50, "M")
     pantalon = Pantalon("Pantalón de Hombre", 30.00, 30, "L")
+    chaqueta = Chaqueta("Chaqueta de Hombre", 55.00, 20, "G")
 
     # Crear instancias de Ropa de Mujer
     falda = Falda("Falda de Mujer", 28.00, 15, "S")
@@ -135,6 +141,7 @@ def main():
     # Simulación de interacción con el usuario
     carrito.agregar_producto(camisa, 2)
     carrito.agregar_producto(pantalon, 1)
+    carrito.agregar_producto(chaqueta, 5)
     carrito.agregar_producto(falda, 1)
     carrito.agregar_producto(zapatos_hombre, 1)
     carrito.agregar_producto(zapatos_mujer, 2)
