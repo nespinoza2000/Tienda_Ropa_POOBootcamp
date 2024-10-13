@@ -37,6 +37,7 @@ class Ropa(Producto):
         )
 
 
+# Ropa de Hombre
 class Chaqueta(Ropa):
     def __init__(self, nombre, precio, cantidad, talla):
         super().__init__(nombre, precio, cantidad, talla)
@@ -121,7 +122,7 @@ class Carrito:
 
 # Interacción con el Usuario y Carrito de Compras
 def main():
-    # Crear instancias de Camisa y Pantalón
+    # Crear instancias de Ropa de Hombre
     camisa = Camisa("Camisa de Hombre", 25.00, 50, "M")
     pantalon = Pantalon("Pantalón de Hombre", 30.00, 30, "L")
     chaqueta = Chaqueta("Chaqueta de Hombre", 55.00, 20, "G")
